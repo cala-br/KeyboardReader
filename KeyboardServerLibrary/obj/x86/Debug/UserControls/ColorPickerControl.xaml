@@ -1,0 +1,88 @@
+﻿<UserControl
+    x:Class="KeyboardReaderLibrary.UserControls.ColorPickerControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReaderLibrary.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    
+    <UserControl.Resources>
+
+        <!--#region Color button style-->
+        <Style 
+            TargetType="Rectangle"
+            x:Key="ColorButtonStyle">
+
+            <Setter Property="Width" Value="48"/>
+            <Setter Property="Height" Value="48"/>
+            <Setter 
+                Property="Stroke" 
+                Value="{ThemeResource SystemControlTransparentRevealListLowBorderBrush}"/>
+
+            <Setter 
+                Property="StrokeThickness"
+                Value="1"/>
+
+        </Style>
+        <!--#endregion-->
+        
+    </UserControl.Resources>
+    
+    
+    <StackPanel x:ConnectionId='2' 
+        x:Name="mainPanel"
+        VerticalAlignment="Top"
+        HorizontalAlignment="Right"
+        Orientation="Horizontal"
+        Padding="2"
+        Spacing="1">
+            
+        <Rectangle x:ConnectionId='3' 
+            Fill="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"
+            RequestedTheme="Dark"
+            Style="{ThemeResource ColorButtonStyle}"
+                                       
+            ToolTipService.ToolTip="Colore di sistema"/>
+
+        <Rectangle x:ConnectionId='4' 
+            Fill="Yellow"
+            RequestedTheme="Light"
+            Style="{ThemeResource ColorButtonStyle}"
+                                       
+            ToolTipService.ToolTip="Giallo"/>
+
+        <Rectangle x:ConnectionId='5'
+            Fill="Blue"
+            RequestedTheme="Dark"
+            Style="{ThemeResource ColorButtonStyle}"
+                                       
+            ToolTipService.ToolTip="Blu"/>
+
+        <Rectangle x:ConnectionId='6'
+            Fill="Red"
+            RequestedTheme="Dark"
+            Style="{ThemeResource ColorButtonStyle}"
+                                       
+            ToolTipService.ToolTip="Rosso"/>
+
+        <Rectangle x:ConnectionId='7'
+            Fill="Green"
+            RequestedTheme="Dark"
+            Style="{ThemeResource ColorButtonStyle}"
+                                       
+            ToolTipService.ToolTip="Verde"/>
+
+        <Rectangle x:ConnectionId='8'
+            Fill="BlueViolet"
+            RequestedTheme="Dark"
+            Style="{ThemeResource ColorButtonStyle}"
+                                       
+            ToolTipService.ToolTip="Viola"/>
+
+    </StackPanel>
+</UserControl>
+

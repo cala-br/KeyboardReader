@@ -1,0 +1,113 @@
+﻿<Page
+    x:Class="KeyboardReader.Pages.KeyboardConnectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReader.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+
+        <!--#region Typed text-->
+        <ScrollViewer Padding="64, 0">
+            <TextBlock x:ConnectionId='7' 
+                x:Name="typedText" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="72"
+                TextWrapping="Wrap"/>
+        </ScrollViewer>
+        <!--#endregion-->
+
+        <!--#region Clear text button-->
+        <Button x:ConnectionId='2' 
+            x:Name="clearTextButton"
+            Style="{ThemeResource RoundedButtonRevealStyleMediumSize}"
+            Visibility="Collapsed"
+            Margin="16"
+            ToolTipService.ToolTip="Cancella testo"
+                             >
+            
+            <!--#region Animations-->
+            <Button.Resources>
+                
+                <!--#region Button enter animation-->
+                <Storyboard x:ConnectionId='5' x:Name="buttonEnterAnimation">
+                    <DoubleAnimation 
+                        Storyboard.TargetName="clearTextButton"
+                        Storyboard.TargetProperty="Opacity"
+                        Duration="0:0:0.2"
+                        To="1"/>
+                    <PopInThemeAnimation 
+                        Storyboard.TargetName="clearTextButton"
+                        Duration="0:0:0.2"/>
+                </Storyboard>
+                <!--#endregion-->
+                
+                <!--#region Button exit animation-->
+                <Storyboard x:ConnectionId='6' x:Name="buttonExitAnimation">
+                    <DoubleAnimation 
+                        Storyboard.TargetName="clearTextButton"
+                        Storyboard.TargetProperty="Opacity"
+                        Duration="0:0:0.2"
+                        To="0"/>
+                    <PopOutThemeAnimation 
+                        Storyboard.TargetName="clearTextButton"
+                        Duration="0:0:0.2"/>
+                </Storyboard>
+                <!--#endregion-->
+                
+            </Button.Resources>
+            <!--#endregion-->
+            
+            <!--#region Content-->
+            <Grid>
+                <FontIcon 
+                    Style="{ThemeResource BigSizeButtonIconStyle}"
+                    FontSize="32"
+                    Glyph="&#x1F4C4;"/>
+
+                <FontIcon
+                    Glyph="&#x274C;"
+                    FontFamily="Segoe UI Emoji"
+                    Margin="26,0,0,-4"
+                    FontSize="14"
+                    RequestedTheme="Dark"
+                    VerticalAlignment="Bottom"/>
+            </Grid>
+            <!--#endregion-->
+
+        </Button>
+        <!--#endregion-->
+
+        <!--#region Connection panel-->
+        <StackPanel x:ConnectionId='3'
+            x:Name="connectionPanel"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Style="{ThemeResource RoundStackPanelRevealStyle}">
+
+            <FontIcon
+                Glyph="&#xE952;"
+                FontSize="56"/>
+
+            <TextBlock 
+                Text="Connettendomi al broker"
+                Opacity="0.8"/>
+
+            <ProgressBar
+                VerticalAlignment="Top"
+                IsIndeterminate="True"
+                Margin="0, 16, 0, 0"/>
+        </StackPanel>
+        <!--#endregion-->
+
+        <MediaElement x:ConnectionId='4' 
+            x:Name="_mediaElement"
+                                         >
+        </MediaElement>
+        
+    </Grid>
+</Page>
+

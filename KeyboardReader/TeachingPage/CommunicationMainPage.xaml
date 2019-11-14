@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="KeyboardReader.Pages.CommunicationMainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReader.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <VariableSizedWrapGrid
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Orientation="Horizontal">
+            <VariableSizedWrapGrid.ChildrenTransitions>
+                <TransitionCollection>
+                    <ReorderThemeTransition/>
+                </TransitionCollection>
+            </VariableSizedWrapGrid.ChildrenTransitions>
+
+            <!--#region Nao parla per me button-->
+            <Button Style="{ThemeResource RoundedButtonRevealStyleBigSize}">
+
+                <!--#region Content-->
+                <StackPanel Spacing="8">
+                    <FontIcon 
+                        Style="{ThemeResource BigSizeButtonIconStyle}"
+                        Glyph="&#x1F5E3;"/>
+
+                    <TextBlock Text="Nao parla per me"/>
+                </StackPanel>
+                <!--#endregion-->
+
+            </Button>
+            <!--#endregion-->
+
+            <!--#region Nao scrive per me button-->
+            <Button Style="{ThemeResource RoundedButtonRevealStyleBigSize}">
+
+                <!--#region Content-->
+                <StackPanel Spacing="8">
+                    <FontIcon 
+                        Style="{ThemeResource BigSizeButtonIconStyle}"
+                        Glyph="&#x1F58B;"/>
+
+                    <TextBlock Text="Nao scrive per me"/>
+                </StackPanel>
+                <!--#endregion-->
+
+            </Button>
+            <!--#endregion-->
+            
+        </VariableSizedWrapGrid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\Assets\AppLogo.png</Source>
+    <SmallTileSource>C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\Assets\AppLogo.png</SmallTileSource>
+    <MediumTileSource>C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\Assets\AppLogo.png</MediumTileSource>
+    <WideTileSource>C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\Assets\AppLogo.png</WideTileSource>
+    <LargeTileSource>C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\Assets\AppLogo.png</LargeTileSource>
+    <AppIconSource>C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\Assets\AppLogo.png</AppIconSource>
+    <SplashScreenSource>C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\Assets\AppLogo.png</SplashScreenSource>
+    <PackageLogoSource>C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\Assets\AppLogo.png</PackageLogoSource>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+</Project>

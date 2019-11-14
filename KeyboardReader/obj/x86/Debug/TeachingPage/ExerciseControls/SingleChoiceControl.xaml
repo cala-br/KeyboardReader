@@ -1,0 +1,80 @@
+﻿<UserControl
+    x:Class="KeyboardReader.Pages.ExerciseControls.SingleChoiceControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReader.Pages.ExerciseControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:c="using:KeyboardReaderLibrary.UserControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid>
+
+        <!--#region Rows-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+        
+        <!--#region Question TextBox-->
+        <TextBox x:ConnectionId='2' 
+            x:Name="questionTextBox"
+            PlaceholderText="Scrivi una domanda..."
+            Margin="-1, 0"
+            BorderThickness="1"
+            BorderBrush="{ThemeResource SystemControlTransparentRevealListLowBorderBrush}"/>
+        <!--#endregion-->
+
+        <!--#region Choices-->
+        <Grid Grid.Row="1">
+
+            <!--#region Rows-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <!--#endregion-->
+
+
+            <ScrollViewer x:ConnectionId='3' 
+                HorizontalScrollBarVisibility="Auto"
+                x:Name="choicesScrollViewer">
+               
+                <!--#region Choices StackPanel-->
+                <StackPanel x:ConnectionId='5' 
+                    x:Name="choicesPanel"
+                    Margin="12"
+                    Spacing="2"/>
+                <!--#endregion-->
+                
+            </ScrollViewer>
+
+            <!--#region Add choice button-->
+            <Button x:ConnectionId='4' 
+                Style="{ThemeResource ButtonRevealStyle}"
+                CornerRadius="12"
+                                 
+                Margin="12"
+                Grid.Row="1">
+
+                <!--#region Content-->
+                <StackPanel 
+                    Orientation="Horizontal"
+                    Spacing="4">
+                    <TextBlock Text="Aggiungi una risposta"/>
+                    <SymbolIcon Symbol="Add"/>
+                </StackPanel>
+                <!--#endregion-->
+
+            </Button>
+            <!--#endregion-->
+
+        </Grid>
+        <!--#endregion-->
+
+    </Grid>
+</UserControl>
+

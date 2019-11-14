@@ -1,0 +1,135 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="KeyboardReader.Pages.LessonCreationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReader.Pages"
+    xmlns:lc="using:KeyboardReader.Pages.ExerciseControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        
+        <!--#region Rows-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+
+        <!--#region Cols-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!--#endregion-->
+        
+
+        <!--#region Header-->
+        <Grid 
+            Background="{ThemeResource SystemControlAcrylicElementBrush}"
+            Grid.ColumnSpan="2">
+
+            <TextBox x:ConnectionId='8'
+                x:Name="header"
+                PlaceholderText="Titolo"
+                                      
+                                          
+                FontSize="28"
+                HorizontalAlignment="Left"
+                FontWeight="SemiLight"
+                Style="{ThemeResource SubtleTextBoxStyle}"
+                Margin="8"/>
+
+        </Grid>
+        <!--#endregion-->
+        
+        <!--#region Buttons-->
+        <StackPanel 
+            Grid.Row="1"
+            Spacing="12"
+            Margin="16,16,0,0">
+
+            <!--#region Add text button-->
+            <Button x:ConnectionId='5' 
+                ToolTipService.ToolTip="Aggiungi testo"
+                Style="{ThemeResource RoundedButtonRevealStyleSmallSize}"
+                                      >
+                <FontIcon Glyph="&#xE8D2;"/>
+            </Button>
+            <!--#endregion-->
+
+            <!--#region Add multiple choice-->
+            <Button x:ConnectionId='6' 
+                ToolTipService.ToolTip="Aggiungi scelta singola"
+                Style="{ThemeResource RoundedButtonRevealStyleSmallSize}"
+                                              >
+                <FontIcon Glyph="&#xE8BC;"/>
+            </Button>
+            <!--#endregion-->
+
+            <!--#region Add true/false-->
+            <Button x:ConnectionId='7'
+                ToolTipService.ToolTip="Aggiungi scelta multipla"
+                Style="{ThemeResource RoundedButtonRevealStyleSmallSize}"
+                                                >
+                <FontIcon Glyph="&#xE133;"/>
+            </Button>
+            <!--#endregion-->
+
+        </StackPanel>
+        <!--#endregion-->
+
+        <!--#region Controls-->
+        <ScrollViewer 
+            Grid.Column="1"
+            Grid.Row="1">
+            <StackPanel x:ConnectionId='4' 
+                x:Name="exercisesPanel"
+                Padding="24"
+                Spacing="36">
+
+                <!--#region Transitions-->
+                <StackPanel.ChildrenTransitions>
+                    <TransitionCollection>
+                        <PaneThemeTransition/>
+                    </TransitionCollection>
+                </StackPanel.ChildrenTransitions>
+                <!--#endregion-->
+
+            </StackPanel>
+        </ScrollViewer>
+        <!--#endregion-->
+
+        <!--#region Command bar-->
+        <CommandBar 
+            DefaultLabelPosition="Right"
+            VerticalAlignment="Bottom"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            Background="{ThemeResource SystemControlAcrylicElementBrush}">
+
+            <!--#region Save button-->
+            <AppBarButton x:ConnectionId='2' 
+                Icon="Save"
+                Label="Salva"
+                Style="{ThemeResource AppBarButtonRevealLabelsOnRightStyle}"
+                            />
+            <!--#endregion-->
+
+            <!--#region Delete button-->
+            <AppBarButton x:ConnectionId='3'
+                Icon="Cancel"
+                Label="Annulla"
+                Style="{ThemeResource AppBarButtonRevealLabelsOnRightStyle}"
+                             />
+            <!--#endregion-->
+
+        </CommandBar>
+        <!--#endregion-->
+
+    </Grid>
+</Page>
+ 
+

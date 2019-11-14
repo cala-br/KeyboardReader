@@ -1,0 +1,10 @@
+﻿"C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\in\KeyboardServer.exe"
+"C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\in\KeyboardServerLibrary.dll"
+"C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\in\M2Mqtt.WinRT.dll"
+"C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\in\Newtonsoft.Json.dll"
+/Lib:"C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\in"
+/Lib:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.compiler\2.2.1\tools\x86\ilc\lib\Private"
+/WinMD:"C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\in\WinMetadata\Windows.winmd"
+/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"101ddc0c-0a66-448d-a272-3d63d5cea141","Id":"1a2c9d35-de60-424a-87d2-5d1f69dfab74","ProcessStartTime":636843833420613578}"
+/RdXmlPath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\2.2.1\tools\LibraryXML"
+/RunOnlyPreDR

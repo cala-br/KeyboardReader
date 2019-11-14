@@ -1,0 +1,17 @@
+﻿/osver:6.2
+/appcontainer
+"/runtime:mrt100_app"
+/eh:clr
+/pdb
+"/nativeLink:C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.compiler\2.2.1\tools\x86\ilc\lib\Native\vmath.lib"
+/customImports
+/methodBodyFolding
+"C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\intermediate\MDIL\KeyboardServer.mdilexe"
+"/i:C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\intermediate\MDIL"
+"/out:C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\intermediate\Native\KeyboardServer.exe"
+"/pdbAltPath:C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\bin\x86\Release\ilc"
+"/res:C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\intermediate\Native.res"
+"/i:C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.sharedlibrary\2.2.1\tools\SharedLibrary\ret\MDIL"
+/shimexe
+"/classlib:SharedLibrary"
+/sourcelink:C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\obj\x86\Release\ilc\intermediate\ILTransformed\Newtonsoft.Json.srclink

@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="KeyboardReader.Pages.LessonsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReader.Pages"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+
+        <GridView x:ConnectionId='2' 
+            x:Name="lessonsGrid" 
+            SelectionMode="None">
+
+            <!--#region Item container style-->
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </GridView.ItemContainerStyle>
+            <!--#endregion-->
+
+            <!--#region Items panel template-->
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <controls:StaggeredPanel 
+                        DesiredColumnWidth="336" 
+                        HorizontalAlignment="Center"
+                        MaxWidth="1068"
+                        Margin="36"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <!--#endregion-->
+            
+        </GridView>
+
+        <!--#region Add material button-->
+        <Button x:ConnectionId='3' 
+            Style="{ThemeResource RoundedButtonRevealStyleMediumSize}"
+            Margin="16"
+            ToolTipService.ToolTip="Aggiungi materiale"
+                                >
+
+            <!--#region Content-->
+            <Grid>
+                <FontIcon 
+                    Style="{ThemeResource BigSizeButtonIconStyle}"
+                    FontSize="32"
+                    Glyph="&#x1F5C3;"/>
+
+                <FontIcon
+                    Glyph="&#x2795;"
+                    FontFamily="Segoe UI Emoji"
+                    Margin="26,0,0,0"
+                    FontSize="14"
+                    RequestedTheme="Dark"
+                    VerticalAlignment="Bottom"/>
+            </Grid>
+            <!--#endregion-->
+
+        </Button>
+        <!--#endregion-->
+
+    </Grid>
+</Page>
+

@@ -1,0 +1,139 @@
+﻿<UserControl x:ConnectionId='1'
+    x:Class="KeyboardReader.Pages.ExerciseControls.ExerciseControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReader.Pages.ExerciseControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:c="using:KeyboardReaderLibrary.UserControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:ConnectionId='2' 
+        x:Name="mainGrid"
+        BorderBrush="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"
+        Background="{ThemeResource SystemControlAcrylicElementBrush}"
+        BorderThickness="2"
+        MaxWidth="720"
+        CornerRadius="4">
+
+        <!--#region Rows-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+
+
+        <!--#region Header-->
+        <Grid x:ConnectionId='3' 
+            x:Name="headerGrid"
+            Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"
+            RequestedTheme="Dark">
+
+            <!--#region Cols-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <!--#endregion-->
+
+            <!--#region Header text-->
+            <TextBox x:ConnectionId='5' 
+                x:Name="header"
+                                      
+                PlaceholderText="Titolo"
+                FontSize="28"
+                HorizontalAlignment="Left"
+                FontWeight="SemiLight"
+                Style="{ThemeResource SubtleTextBoxStyle}"
+                Margin="8,0"/>
+            <!--#endregion-->
+
+            <!--#region Buttons-->
+            <StackPanel
+                Orientation="Horizontal"
+                Padding="4"
+                Spacing="4"
+                Grid.Column="1">
+
+                <!--#region Customize button-->
+                <Button 
+                    Style="{ThemeResource RoundedButtonRevealStyleSmallSize}">
+                    
+                    <!--Icon-->
+                    <FontIcon Glyph="&#xE2B1;"/>
+                    
+                    <!--#region Flyout-->
+                    <Button.Flyout>
+                        <Flyout Placement="Bottom">
+                            <c:ColorPickerControl x:ConnectionId='9' 
+                                x:Name="colorPicker"
+                                Grid.ColumnSpan="2"
+                                Grid.RowSpan="2"
+                                                         />
+                        </Flyout>
+                    </Button.Flyout>
+                    <!--#endregion-->
+                    
+                </Button>
+                <!--#endregion-->
+
+                <!--#region Delete button-->
+                <Button Style="{ThemeResource RoundedButtonRevealStyleSmallSize}">
+                    
+                    <!--Icon-->
+                    <SymbolIcon Symbol="Delete"/>
+                    
+                    <!--#region Flyout-->
+                    <Button.Flyout>
+                        <Flyout x:ConnectionId='6' 
+                            Placement="Bottom"
+                            x:Name="deleteButtonFlyout">
+                            <StackPanel Spacing="8">
+                                
+                                <!--Header-->
+                                <TextBlock Text="Vuoi eliminare l'esercizio?"/>
+
+                                <StackPanel 
+                                    Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    Spacing="4">
+
+                                    <Button x:ConnectionId='7' 
+                                        Width="56"
+                                        Content="No"
+                                        Style="{ThemeResource ButtonRevealStyle}"
+                                                                />
+
+                                    <Button x:ConnectionId='8' 
+                                        Width="56"
+                                        Style="{ThemeResource ButtonRevealStyle}"
+                                                             
+                                        Content="Sì"/>
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                    <!--#endregion-->
+                    
+                </Button>
+                <!--#endregion-->
+
+            </StackPanel>
+            <!--#endregion-->
+
+        </Grid>
+        <!--#endregion-->
+
+        <ContentPresenter x:ConnectionId='4'    
+            Grid.Row="1"
+            MinHeight="72"
+            MaxHeight="320"
+                                           />
+
+    </Grid>
+</UserControl>
+

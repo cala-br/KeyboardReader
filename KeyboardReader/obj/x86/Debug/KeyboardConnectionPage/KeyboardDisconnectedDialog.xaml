@@ -1,0 +1,41 @@
+﻿<ContentDialog
+    x:Class="KeyboardReader.Pages.KeyboardDisconnectedDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReader.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Oh..."
+    PrimaryButtonText="Capito"
+    Style="{ThemeResource AcrylicDialogStyle}">
+
+    <StackPanel>
+
+        <!--#region Icons-->
+        <Grid>
+            <FontIcon 
+                Glyph="&#xE765;"
+                FontSize="56"
+                HorizontalAlignment="Left"/>
+
+            <FontIcon 
+                Glyph="&#x274C;"
+                FontSize="24"
+                FontFamily="Segoe UI Emoji"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Foreground="Red"
+                Margin="32,0,0,0"/>
+        </Grid>
+        <!--#endregion-->
+        
+        <TextBlock 
+            TextWrapping="Wrap"
+            MaxWidth="348">
+            Sembra che la tastiera si sia disconnessa in modo imprevisto.
+        </TextBlock>
+
+    </StackPanel>
+</ContentDialog>
+

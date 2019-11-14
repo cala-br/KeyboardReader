@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="KeyboardReader.Pages.TeachingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReader.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <VariableSizedWrapGrid
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <VariableSizedWrapGrid.ChildrenTransitions>
+                <TransitionCollection>
+                    <ReorderThemeTransition/>
+                </TransitionCollection>
+            </VariableSizedWrapGrid.ChildrenTransitions>
+            
+            
+            <!--#region Lessons button-->
+            <Button 
+                Style="{ThemeResource RoundedButtonRevealStyleBigSize}"
+                Click="NavigateToLessonsPreparationPage">
+
+                <StackPanel Spacing="8">
+                    <FontIcon 
+                        Style="{ThemeResource BigSizeButtonIconStyle}"
+                        Glyph="&#x1F4DA;"/>
+
+                    <TextBlock 
+                        Text="Esercizi"
+                        TextAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <!--#endregion-->
+
+            <!--#region Tests button-->
+            <Button 
+                Style="{ThemeResource RoundedButtonRevealStyleBigSize}"
+                Click="NavigateToTestsPage">
+
+                <!--#region Content-->
+                <StackPanel Spacing="8">
+                    <FontIcon 
+                        Style="{ThemeResource BigSizeButtonIconStyle}"
+                        Glyph="&#x1F393;"/>
+
+                    <TextBlock Text="Lezioni e verifiche"/>
+                </StackPanel>
+                <!--#endregion-->
+            </Button>
+            <!--#endregion-->
+
+            <!--#region Communication button-->
+            <Button 
+                Style="{ThemeResource RoundedButtonRevealStyleBigSize}"
+                Click="NavigateToCommunicationPage">
+
+                <!--#region Content-->
+                <StackPanel Spacing="8">
+                    <FontIcon 
+                        Style="{ThemeResource BigSizeButtonIconStyle}"
+                        Glyph="&#x1F916;"/>
+
+                    <TextBlock Text="Comunicazione"/>
+                </StackPanel>
+                <!--#endregion-->
+                
+            </Button>
+            <!--#endregion-->
+
+        </VariableSizedWrapGrid>
+    </ScrollViewer>
+</Page>

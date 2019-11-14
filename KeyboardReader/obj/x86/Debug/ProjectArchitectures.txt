@@ -1,0 +1,2 @@
+C:\Condivisi\4H\NAO\KeyboardReader\KeyboardReader\KeyboardReader.csproj;x86
+C:\Condivisi\4H\NAO\KeyboardReader\KeyboardServerLibrary\KeyboardReaderLibrary.csproj;x86

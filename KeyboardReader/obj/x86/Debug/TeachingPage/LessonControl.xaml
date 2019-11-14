@@ -1,0 +1,146 @@
+﻿<UserControl x:ConnectionId='1'
+    x:Class="KeyboardReader.Pages.LessonControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeyboardReader.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400" 
+    MaxHeight="320"
+    MaxWidth="320"
+    Width="320"
+    HorizontalAlignment="Center">
+
+    <Grid 
+        Style="{ThemeResource RoundGridRevealStyle}"
+        Width="320"
+        Padding="0">
+
+        <!--#region Rows-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+        
+        <!--#region Top bar-->
+        <Grid
+            VerticalAlignment="Top"
+            CornerRadius="12"
+            Margin="-2"
+            Padding="4"
+            BorderBrush="{ThemeResource SystemControlTransparentRevealListLowBorderBrush}"
+            BorderThickness="2">
+            
+            <!--#region Background-->
+            <Grid.Background>
+                <AcrylicBrush
+                    TintColor="{ThemeResource SystemAltHighColor}"
+                    FallbackColor="{ThemeResource SystemAltMediumColor}"
+                    TintOpacity="0.8"/>
+            </Grid.Background>
+            <!--#endregion-->
+
+            <!--#region Cols-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <!--#endregion-->
+
+            
+            <!--Header-->
+            <TextBlock x:ConnectionId='3'
+                x:Name="header"
+                                      
+                                          
+                Margin="8,0"
+                VerticalAlignment="Center"
+                Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}"/>
+
+            <!--#region Buttons-->
+            <StackPanel 
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                Orientation="Horizontal"
+                Spacing="4">
+
+                <!--#region Edit button-->
+                <Button x:ConnectionId='4'
+                    Style="{ThemeResource RoundedButtonRevealStyleSmallSize}"
+                    ToolTipService.ToolTip="Modifica"
+                                           >
+                    <FontIcon Glyph="&#xE104;"/>
+                </Button>
+                <!--#endregion-->
+
+                <!--#region Delete button-->
+                <Button
+                    Style="{ThemeResource RoundedButtonRevealStyleSmallSize}"
+                    ToolTipService.ToolTip="Elimina">
+
+                    <!--Icon-->
+                    <SymbolIcon Symbol="Delete"/>
+
+                    <!--#region Flyout-->
+                    <Button.Flyout>
+                        <Flyout x:ConnectionId='5' 
+                            Placement="Bottom"
+                            x:Name="deleteButtonFlyout">
+                            <StackPanel Spacing="8">
+
+                                <!--Header-->
+                                <TextBlock Text="Vuoi eliminare l'esercizio?"/>
+
+                                <StackPanel 
+                                    Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    Spacing="4">
+
+                                    <Button x:ConnectionId='6' 
+                                        Width="56"
+                                        Content="No"
+                                        Style="{ThemeResource ButtonRevealStyle}"
+                                                                />
+
+                                    <Button x:ConnectionId='7' 
+                                        Width="56"
+                                        Style="{ThemeResource ButtonRevealStyle}"
+                                                      
+                                        Content="Sì"/>
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                    <!--#endregion-->
+
+                </Button>
+                <!--#endregion-->
+                
+            </StackPanel>
+            <!--#endregion-->
+
+        </Grid>
+        <!--#endregion-->
+        
+        <!--#region Content-->
+        <Grid 
+            Grid.Row="1"
+            CornerRadius="12">
+
+            <ScrollViewer
+                VerticalScrollBarVisibility="Hidden"
+                Padding="16"
+                CornerRadius="12">
+                <StackPanel x:ConnectionId='2' x:Name="exercisesPanel"/>
+            </ScrollViewer>
+
+        </Grid>
+        <!--#endregion-->
+        
+    </Grid>
+</UserControl>
+
